@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background: #121212;
+}
+
+button{
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.sidebar{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 100%;
+    background: #3949ab;
+    transition: all 0.4s;
+}
+
+body.open .sidebar{
+    width: 240px;
+}
+
+.sidebar-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+}
+
+.sidebar-header{
+    display: flex;
+    align-items: center;
+    height: 68px;
+    padding: 0 1.25rem 0 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-left: 3px solid transparent;
+    transition: all 0.4s;
+}
+
+.sidebar-header:hover{
+    border-left: 3px solid #bdbdbd;
+}
+
+.sidebar-burger{
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+}
+
+.sidebar-burger > i, body.open .sidebar-burger > i{
+    font-size: 25px;
+    color: #f9f9f9;
+    transition: all 0.4s;
+}
+
+.sidebar-burger:hover > i, body.open .sidebar-burger:hover > i{
+    color: #bdbdbd;
+}
+
+.sidebar-logo{
+    height: 30px;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+body.open .sidebar-logo{
+    opacity: 1;
+    transition: all 0.4s;
+}
+
+.sidebar-menu{
+    display: grid;
+}
+
+.sidebar-menu > button{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    height: 55px;
+    font-family: "Ubuntu";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding: 0 22px;
+    border-left: 3px solid transparent;
+    transition: all 0.4s;
+}
+
+.sidebar-menu > button:hover{
+    border-left: 3px solid #f9f9f9;
+}
+
+.sidebar-menu > button.has-border{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    margin-bottom: 1rem;
+}
+
+.sidebar-menu > button > i{
+    font-size: 25px;
+    color: #f9f9f9;
+    transition: all 0.4s;
+}
+
+.sidebar-menu > button:hover > i, .sidebar-menu > button:hover > span{
+    color: #bdbdbd;
+}
+
+.sidebar-menu > button > span{
+    color: #f9f9f9;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+body.open .sidebar-menu > button > span{
+    opacity: 1;
+    transition: all 0.4s;
+}
